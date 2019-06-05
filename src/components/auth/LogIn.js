@@ -42,18 +42,18 @@ class LogIn extends Component {
       const user = await Auth.signIn(this.state.username, this.state.password);
       console.log(user.username);
       // console.log(JSON.stringify(user));
-      let jwtString = user.signInUserSession.idToken.jwtToken
+      // let jwtString = user.signInUserSession.idToken.jwtToken
 
       // get payload from aws jwtToken
-      var payloadAws = user.signInUserSession.idToken.payload
+      let payloadAws = user.signInUserSession.idToken.payload
 
       // change audience to your stitch client id
       payloadAws.aud = config.stitch.appId
 
-      var jKey = config.stitch.jwtKey
-      var signOptions = { algorithm: "HS256" };
+      let jKey = config.stitch.jwtKey
+      let signOptions = { algorithm: "HS256" };
 
-      jwtString = jwt.sign(payloadAws, jKey, signOptions);
+      let jwtString = jwt.sign(payloadAws, jKey, signOptions);
       console.log("JWToken - " + jwtString)
 
       // stitch code goes here 
