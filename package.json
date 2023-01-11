@@ -9,7 +9,7 @@
     "aws-amplify": "^1.1.28",
     "axios": "^0.18.0",
     "bulma": "^0.7.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "jwk-to-pem": "^2.0.1",
     "jwks-rsa": "^1.5.1",
     "mongodb-stitch-browser-sdk": "^4.4.0",
